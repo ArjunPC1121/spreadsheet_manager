@@ -15,3 +15,6 @@ db.sqlite3
 
 # Django static files
 staticfiles/
+
+#Downloaded excel files
+media/
