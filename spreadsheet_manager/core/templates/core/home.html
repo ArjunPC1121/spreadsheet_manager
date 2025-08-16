@@ -15,10 +15,23 @@
     </form>
 
     {% if preview_html %}
-        <h3>Preview (First 5 rows)</h3>
+        <h3>Original Preview (First 5 rows)</h3>
         <div class="table-responsive">
             {{ preview_html|safe }}
         </div>
     {% endif %}
+
+    {% if processed_preview_html %}
+        <h3 class="mt-4">Processed Preview (First 5 rows)</h3>
+        <div class="table-responsive">
+            {{ processed_preview_html|safe }}
+        </div>
+        {% if processed_file_url %}
+            <a href="{{ processed_file_url }}" class="btn btn-success mt-2" download>
+                Download Processed File
+            </a>
+        {% endif %}
+    {% endif %}
+
 </body>
 </html>
